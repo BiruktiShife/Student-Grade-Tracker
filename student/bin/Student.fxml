@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StudentController">
+   <children>
+      <VBox prefHeight="485.0" prefWidth="187.0">
+         <children>
+            <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="303.0" style="-fx-border-color: PURPLE;">
+              <columns>
+                <TableColumn fx:id="userNameColumn" prefWidth="169.0" text="UserName" />
+                <TableColumn fx:id="idColumn" prefWidth="68.0" text="ID" />
+                  <TableColumn fx:id="gradeColumn" prefWidth="65.0" text="Grade" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="213.0" style="-fx-border-color: PURPLE;">
+         <children>
+            <Button fx:id="addStudentBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onAddStudentHandler" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: PURPLE; -fx-border-style: NONE; -fx-text-fill: WHITE;" text="Add Student">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="70.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+               </padding>
+            </Button>
+            <VBox prefHeight="496.0" prefWidth="211.0" style="-fx-border-color: PURPLE;">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="127.0" style="-fx-text-fill: PURPLE;" text="Search Student By Id:">
+                     <VBox.margin>
+                        <Insets left="10.0" top="130.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="enterIdTF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="157.0" promptText="Enter Id" style="-fx-border-color: PURPLE;">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="removeInfoBtn" mnemonicParsing="false" onAction="#onRemoveInfoHandler" prefHeight="35.0" prefWidth="158.0" style="-fx-background-color: PURPLE; -fx-text-fill: WHITE;" text="Remove Information">
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="updateInfoBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onUpdateInfoHandler" prefHeight="35.0" prefWidth="158.0" style="-fx-background-color: PURPLE; -fx-text-fill: WHITE;" text="Update Information">
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox fx:id="formVBox" prefHeight="600.0" prefWidth="185.0" style="-fx-border-color: PURPLE;">
+         <children>
+            <Label style="-fx-text-fill: PURPLE;" text="Student Name:">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="40.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="studentNameTF" prefHeight="35.0" prefWidth="127.0" promptText="Name" style="-fx-border-color: PURPLE;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label style="-fx-text-fill: PURPLE;" text="Student Id:">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="studentIdTF" prefHeight="35.0" prefWidth="127.0" promptText="ID" style="-fx-border-color: PURPLE;">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label prefHeight="29.0" prefWidth="108.0" style="-fx-text-fill: PURPLE;" text="Number Of Courses:">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="numberOfCourse" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: PURPLE;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label prefHeight="35.0" prefWidth="127.0" style="-fx-text-fill: PURPLE;" text="Name Of Courses:">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="courseNameTF" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="127.0" promptText="Enter Name" style="-fx-border-color: PURPLE;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label prefHeight="35.0" prefWidth="127.0" style="-fx-text-fill: PURPLE;" text="Courses Grade:">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox prefHeight="35.0" prefWidth="158.0" style="-fx-background-color: PURPLE;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label prefHeight="35.0" prefWidth="127.0" style="-fx-text-fill: PURPLE;" text="Credit Houre:">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="creditHoureTF" prefHeight="35.0" prefWidth="127.0" promptText="Enter Credit Houre" style="-fx-border-color: PURPLE;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox prefHeight="58.0" prefWidth="184.0">
+               <children>
+                  <Button fx:id="nextCourseBtn" mnemonicParsing="false" onAction="#onNextCourseHandler" prefHeight="31.0" prefWidth="99.0" style="-fx-background-color: PURPLE; -fx-text-fill: WHITE;" text="Next Course">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="submitBtn" mnemonicParsing="false" onAction="#onSubmitBtnHandler" prefHeight="31.0" prefWidth="62.0" style="-fx-background-color: PURPLE; -fx-text-fill: WHITE;" text="Submit">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </VBox>
+      <ListView fx:id="listView" onMouseClicked="#listViewHandler" prefHeight="600.0" prefWidth="300.0" />
+   </children>
+</HBox>
